@@ -1,0 +1,58 @@
+<%- include('includes/head')%>
+<%- include('includes/navbar')%>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
+
+    <div class="col-lg-8 my-3">
+
+      <h1 class="text-center">Acesse sua Conta</h1>
+
+      <%- include('includes/messages')%>
+
+      <div class="row my-5">
+      
+        <div class="col-lg">
+            <h4>Crie sua Conta</h4>
+            <p>É novo por aqui? Preencha o formulário abaixo para se registrar</p>
+            <form action="register" method="POST">
+                <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email</label>
+                  <input type="email" name="email"class="form-control" id="exampleInputEmail1" placeholder="Seu email">
+                  <small class="form-text text-muted">Nós nunca iremos compartilhar seu email com ninguém</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+                </div>
+                <button type="submit" class="btn btn-primary">Registrar</button>
+            </form>
+        </div>
+
+        <div class="col-lg">
+            <h4>Fazer Login</h4>
+            <p>Já tem conta? Faça login abaixo:</p>
+            <form action="login" method="POST">
+                <input type="hidden" name="_csrf" value="<%= csrfToken%>">
+                <div class="form-group">
+                  <label for="exampleInputEmail2">Email</label>
+                  <input type="email" name="email" class="form-control" id="exampleInputEmail2" placeholder="Seu email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword2">Password</label>
+                  <input type="password" name="password" class="form-control" id="exampleInputPassword2" placeholder="Senha">
+                </div>
+                <button type="submit" class="btn btn-primary">Entrar</button>
+              </form>
+        </div>
+
+      </div>  
+    </div>
+    
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/head')%>

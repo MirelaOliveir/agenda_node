@@ -1,34 +1,44 @@
-<%- include('includes/head') %>
+<%- include('includes/head')%>
+<%- include('includes/navbar')%>
 
-    <section class="container">
-        <h1>
-          <!-- if para incluir o titulo que vem do homeController -->
-          <!-- <% if(typeof titulo !== 'undefined') {%>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-2"></div>
 
-            <%= titulo %>
+    <div class="col-lg-8 my-3">
 
-          <% } else { %>
-            O titulo não foi enviado
-          <% } %> -->
+      <h1 class="text-center">Agenda</h1>
+      <p class="text-center lead">Seus contatos estão abaixo</p>
 
-          <br>
-          
-          <!-- for para iterar um array que vem do homeController -->
-          <!-- <% numeros.forEach( num => { %>
+      <%- include('includes/messages')%>
 
-            <%= num %> 
-            <br> 
+      <div class="responsive-table">
+        <table class="table my-3">
+          <tr>
+            <td>Mirela</td>
+            <td>Oliveira</td>
+            <td>8238357834</td>
+            <td>email@email.com</td>
+          </tr>
+          <tr>
+            <td>Mirela</td>
+            <td>Oliveira</td>
+            <td>8238357834</td>
+            <td>email@email.com</td>
+          </tr>
+          <tr>
+            <td>Mirela</td>
+            <td>Oliveira</td>
+            <td>8238357834</td>
+            <td>email@email.com</td>
+          </tr>
+        </div>
+      </table>
 
-          <% }); %> -->
-            
-
-        </h1>
-        <form action="/" method="post">
-          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
-          Nome:
-          <input name="nome" type="text">
-          <button type="submit">enviar</button>
-        </form>
-      </section>
+    </div>
     
-<%- include('includes/footer') %>
+    <div class="col-lg-2"></div>
+  </div>
+</div>
+
+<%- include('includes/head')%>
