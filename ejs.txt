@@ -1,0 +1,5 @@
+<% COntrole de fluxo ( if, for) %>
+<%= Imprime todos os caracteres, mesmo se for html/js... %>
+<%- Imprime texto, mas executa html/js... %>
+<%# Comentário %>
+<%# include('caminho/arquivo') %>

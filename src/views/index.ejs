@@ -1,0 +1,34 @@
+<%- include('includes/head') %>
+
+    <section class="container">
+        <h1>
+          <!-- if para incluir o titulo que vem do homeController -->
+          <!-- <% if(typeof titulo !== 'undefined') {%>
+
+            <%= titulo %>
+
+          <% } else { %>
+            O titulo não foi enviado
+          <% } %> -->
+
+          <br>
+          
+          <!-- for para iterar um array que vem do homeController -->
+          <!-- <% numeros.forEach( num => { %>
+
+            <%= num %> 
+            <br> 
+
+          <% }); %> -->
+            
+
+        </h1>
+        <form action="/" method="post">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          Nome:
+          <input name="nome" type="text">
+          <button type="submit">enviar</button>
+        </form>
+      </section>
+    
+<%- include('includes/footer') %>
